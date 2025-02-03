@@ -129,12 +129,28 @@ USE_I18N = True
 USE_TZ = True
 
 
+# STATICFILES_DIRS: This lists additional directories that Django's collectstatic tool 
+# should search for static files.
+STATICFILES_DIRS = []
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_ROOT: This is the absolute path to a directory where Django's collectstatic tool 
+# will gather any static files referenced in our templates. Once collected, these can then be uploaded as a group to wherever the files are to be hosted.
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+# STATIC_URL: This is the base URL location from which static files will be served, 
+# for example on a CDN.
+STATIC_URL = 'static/'
+
+# MEDIA_ROOT: This is the absolute path to a directory where Django will gather any user uploaded images and files
+# ex: /var/www/files/media
+MEDIA_ROOT = f"/project/media"
+
+# MEDIA_URL: This is the base URL location from which static files will be served, 
+# for example on a CDN.
+MEDIA_URL = f"media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
